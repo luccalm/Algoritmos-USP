@@ -11,23 +11,19 @@ Segundo = 3 + 4
 Terceiro = 3 + 4 + 5
 */
 
-int main(){
-	int numero, numero1, termos, soma = 0, i;
+int main() {
+int numero, soma = 0, i;
 
-	printf("Digite um número inteiro positivo:");
-	scanf("%d", &numero);
+printf("Digite um número inteiro positivo:");
+scanf("%d", &numero);
 
-	printf("Digite a quantidade de termos:");
-	scanf("%d", &termos);
-
-	for(i = 0; i < termos; i++)
-	{	
-	numero1 = numero + i;
-	soma = soma + numero1;	
-	}
-	printf("A soma dos %d primeiros termos do número %d é: %d \n" , termos, numero, soma);
+for(i = 0; i < numero; i++)
+{	
+soma = soma + i;
+}
+printf("A soma dos %d primeiros termos é %d \n" , numero, soma);
 
 return 0;
-}
 
+}
 
