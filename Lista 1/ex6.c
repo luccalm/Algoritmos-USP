@@ -9,7 +9,7 @@
 */
 
 int main(){
-	int n, i = 0, notaAluno, notaMaxima = 0, notaMinima = 0;
+	int n, i = 0, notaAluno, notaMaxima = 0, notaMinima = 100;
 
 	printf("Digite o número de alunos:");
 	scanf("%d", &n);
@@ -21,16 +21,15 @@ int main(){
 		scanf("%d", &notaAluno);
 			if(notaAluno > notaMaxima)
 				{
-				notaMaxima = notaAluno;	
-				notaMinima = notaAluno;
-				}
-				else if(notaAluno < notaMinima)
+				notaMaxima = notaAluno;
+				}	
+			if(notaAluno < notaMinima)
 				{
 				notaMinima = notaAluno;
 				}
 		i++;
 		}
 	
-	printf("%d %d", notaMaxima, notaMinima);
+	printf("A nota máxima foi de: %d e a minina de: %d \n", notaMaxima, notaMinima);
 return 0;
 }
