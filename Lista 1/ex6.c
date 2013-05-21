@@ -9,25 +9,25 @@
 */
 
 int main(){
-	int n, i = 0, notaAluno, notaMaxima = 0, notaMinima = 100;
+	int n, soma = 0, notaAluno, notaMaxima = 0, notaMinima = 100;
 
 	printf("Digite o número de alunos:");
 	scanf("%d", &n);
 
 	//Inserir Nota dos alunos:
-	while(i < n)
+	while(soma < n)
 		{
-		printf("Digite a nota do aluno %d:",  i+1);
+		printf("Digite a nota do aluno %d:",  soma+1);
 		scanf("%d", &notaAluno);
-			if(notaAluno > notaMaxima)
+			if(notaAluno > notaMaxima) //Compara a nota do aluno com a nota máxima.
 				{
 				notaMaxima = notaAluno;
 				}	
-			if(notaAluno < notaMinima)
+			if(notaAluno < notaMinima) //Compara a nota do aluno com a nota mínima.
 				{
 				notaMinima = notaAluno;
 				}
-		i++;
+		soma++;
 		}
 	
 	printf("A nota máxima foi de: %d e a minina de: %d \n", notaMaxima, notaMinima);
