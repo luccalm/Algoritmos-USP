@@ -19,13 +19,13 @@ dois primeiros e dois últimos dígitos.
 
 int main() {
 
-int resto = 0, dividendo = 0, raiz = 0, algarismos = 1000;
+int resto = 0, divisor = 0, raiz = 0, algarismos = 1000;
 
 while(algarismos < 10000) 
 {
 resto = algarismos % 100; //Descobre os últimos 2 algarismos (resto)
-dividendo = algarismos / 100; //Descobre os primeiros 2 algarismos (dividendo)
-raiz = resto + dividendo; //Realiza a soma das duas dezenas
+divisor = algarismos / 100; //Descobre os primeiros 2 algarismos (dividendo)
+raiz = resto + divisor; //Realiza a soma das duas dezenas
 	if(raiz*raiz == algarismos) //Caso a variável raiz (soma das 2 dezenas) seja igual ao algarismo imprime o mesmo.
 		{
 		printf("[%d] \n", algarismos);	
