@@ -12,21 +12,17 @@ int main(){
 	scanf("%d", &p);
 
 	for(i = 1; i < p; i++)
-	{	
+	{
 	if(p % i == 0) 
 	{
 	nPrimo++;	
 	}
 	}
 
-	if(nPrimo < 2)
-	{
-	printf("O número é primo. \n");	
-	}
-	else
-	{
-	printf("O número não é primo. \n");	
-	}
+	if(nPrimo < 2) { printf("O número é primo. \n"); }
+	else { printf("O número não é primo. \n"); }
+
+
 	
 return 0;
 }

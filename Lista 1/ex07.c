@@ -19,7 +19,7 @@ int main(){
 		n--;
 	}
 
-	printf("A soma dos pares é: [%d]", soma);
+	printf("A soma dos pares é: [%d] \n", soma);
 
 return 0;
 }

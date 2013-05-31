@@ -14,18 +14,26 @@ O n-ésimo número da seqüência de Fibonacci Fn é dado pela seguinte fórmula
 #include <math.h>
 
 int main() {
-  int n, terceiroTermo, primeiroTermo = 0, segundoTermo = 1, cont = 0;
+  int n, soma, primeiroTermo, segundoTermo, TerceiroTermo; 
   
   printf("Digite um numero n: ");
   scanf("%d", &n);
   
- while (cont < n) {
-    terceiroTermo = primeiroTermo + segundoTermo;  
-    primeiroTermo = segundoTermo;
-    segundoTermo = terceiroTermo;
-	cont++;
+  //Declaração:
+  soma = 1;
+  primeiroTermo = 0;
+  segundoTermo = 1;
+
+  while(soma < n)
+  {
+  TerceiroTermo = primeiroTermo + segundoTermo;
+  primeiroTermo = segundoTermo;
+  segundoTermo = TerceiroTermo;
+  soma++;
   }
-  printf("O n-ésimo termo da seqüência é: %d \n", terceiroTermo);
+
+
+  printf("O n-ésimo termo da seqüência é: %d \n", TerceiroTermo);
   
   return 0;
 }

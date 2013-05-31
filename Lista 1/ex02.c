@@ -5,11 +5,6 @@
 
 // 2.  Dado um número inteiro positivo n, calcular a soma dos n primeiros números naturais. 
 
-/* 
-Primeiro = 3
-Segundo = 3 + 4
-Terceiro = 3 + 4 + 5
-*/
 
 int main() {
 int numero, soma = 0, i;

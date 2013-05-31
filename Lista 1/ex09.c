@@ -6,7 +6,7 @@
 #include <math.h>
 
 int main(){
-	int termo, n, i, j, soma = 0, numero; //Declara as variáveis.
+	int termo, n, i, j, soma = 0; //Declara as variáveis.
 
 	//Digitar N
 	printf("Digite n:");
@@ -27,10 +27,12 @@ int main(){
 	{
 		printf("[%d]", soma);
 		termo++;
+		continue;
 	}
 	if(soma % i == 0 || soma % j == 0) { 
 		printf("[%d]", soma);
 		termo++;
+		continue;
 	}
 	soma++;
 	}

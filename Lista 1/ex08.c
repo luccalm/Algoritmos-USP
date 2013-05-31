@@ -18,7 +18,7 @@ int main(){
 	n--; //Subtrai N para multiplicar o próximo número.
 	}
 
-	printf("Resultado: %d", multiplicacao); //No final do loop mostra o resultado.
+	printf("Resultado: %d. \n", multiplicacao); //No final do loop mostra o resultado.
 
 return 0;
 }

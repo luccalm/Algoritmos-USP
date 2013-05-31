@@ -13,34 +13,35 @@
 
 int main() {
 
-int n, numero, numeroAnterior = 0, comprimento = 0, comprimentoMaximo = 1, sequencia = 0;
+int numero, comprimento = 0, comprimentoMaximo = 0;
+int numeroAnterior = 0;
+int i, n;
 
 printf("Digite um valor para N:");
 scanf("%d", &n);
 
-while(sequencia < n)
+for(i = 0; i < n; i++)
 {
 printf("Digite um número:");
 scanf("%d", &numero);
 
 if(numero > numeroAnterior)
-	{
-	comprimento++;
-	numeroAnterior = numero;	
-	}
+{
+comprimento++;
+}
 else
 {
-if(comprimentoMaximo < comprimento)
-{
-comprimentoMaximo = comprimento;	
-comprimento = 1;
+	if(comprimento > comprimentoMaximo)
+	{
+	comprimentoMaximo = comprimento;
+	comprimento = 1;	
+	}
 }
-}
-sequencia++;
+numeroAnterior = numero;
+printf("%d\n", numeroAnterior);
 }
 
-
-printf("O comprimento do segmento crescente máximo é: %d. \n", comprimento);
+printf("O comprimento do segmento crescente máximo é: %d. \n", comprimentoMaximo);
 
 return 0;
 }

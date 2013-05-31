@@ -6,7 +6,7 @@
 
 int main() {
 
-int A[3], B[3], maior = 0, i, j;
+int A[3], temp, i, troca;
 
 for(i = 0; i < 3; i++)
 {
@@ -14,22 +14,26 @@ for(i = 0; i < 3; i++)
 	scanf("%d", &A[i]);	
 }
 
-for(i = 0; i < 3; i++) 
+troca = 1;
+while(troca)
+{
+troca = 0;
+	for(i = 0; i < 2; i++)
 	{
-	maior = 0;
-	for(j = 0; j < 3; j++) 
-			{
-		if(A[i] > A[j]) //Verifica caso A[i] seja maior que A[j]
-			{
-			maior++; //Caso A[i] seja maior que A[j] soma maior++
-			}
-			}	
-		B[maior] = A[i]; //No final do loop declara B[maior] como sendo o valor de A[i]	
-	}		
+		if(A[i] > A[i+1])
+		{
+		temp = A[i];
+		A[i] = A[i+1];
+		A[i+1] = temp;	
+		troca = 1;
+		}	
+	}
+
+}	
 
 for(i = 0; i < 3; i++)
 	{
-	printf("[%d] \n", B[i]);	
+	printf("[%d] \n", A[i]);	
 	}	
 
   return 0;

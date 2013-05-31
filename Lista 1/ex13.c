@@ -1,4 +1,5 @@
-/* 13.  (MAT 89) Dizemos que um inteiro positivo n é perfeito se for igual à soma de seus divisores positivos diferentes de n.
+/* 13.  (MAT 89) Dizemos que um inteiro positivo n é perfeito se for igual à soma de seus divisores positivos 
+diferentes de n.
 
     Exemplo: 6 é perfeito, pois 1+2+3 = 6.
 
@@ -26,7 +27,11 @@ int main(){
 	if(soma == n)
 	{
 	printf("O número %d é perfeito.", n);
+	return 0;
 	}
+
+	printf("O número %d não é perfeito.", n);
+
 
 	
 return 0;

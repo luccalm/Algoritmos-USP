@@ -17,5 +17,46 @@
 
 int main() {
 
+ int numero, num1, i, pot = 1, quot, n = 0, multi = 1;
+int resto;
+int invertido = 0;
+int divisao;
+
+ printf("Digite um número:");
+ scanf("%d", &numero);
+
+num1 = numero;
+divisao = num1;
+
+while(divisao > 10)
+{
+divisao = num1 / 10;
+multi = multi * 10;
+num1 = num1 / 10;
+n++;
+}
+
+num1 = numero;
+
+while(n >= 0 )
+{
+resto = (num1 % 10) * multi;
+num1 =  num1 / 10;
+multi =  multi / 10;
+invertido = invertido + resto;
+n--;
+}
+
+if(numero == invertido)
+	{
+	printf("%d é palindromo.", numero);
+	return 0;
+	}
+else
+	{
+	printf("%d não é palindromo.", numero);	
+	}	
+
+
 return 0;
 }
